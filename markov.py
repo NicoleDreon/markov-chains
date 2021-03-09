@@ -10,7 +10,7 @@ def open_and_read_file(file_path):
     the file's contents as one string of text.
     """
 
-    text_body_string = open('green-eggs.txt').read()
+    text_body_string = open(file_path).read()
     
     return text_body_string
 
@@ -40,11 +40,17 @@ def make_chains(text_string):
         >>> chains[('there','juanita')]
         [None]
     """
-
+    
     chains = {}
+   
+    words = text_string.split()
+    print(words)
+    for i in range(len(words)-1):
+        #print(words[i], words[i+1])
+        chains[words[i], words[i+1]] = None
 
-    # your code goes here
-
+     
+    print(chains)
     return chains
 
 
