@@ -44,7 +44,7 @@ def make_chains(text_string):
     chains = {}
    
     words = text_string.split()
-    print(words)
+    #print(words)
     for i in range(len(words)-1):
         #print(words[i], words[i+1])
         chains[words[i], words[i+1]] = None
